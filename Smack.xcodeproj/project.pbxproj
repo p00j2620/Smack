@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001784D31F30B9DA0087E7ED /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001784D21F30B9DA0087E7ED /* ChatVC.swift */; };
+		001784D51F30B9F40087E7ED /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001784D41F30B9F40087E7ED /* ChannelVC.swift */; };
 		001B6B601F30142A0021F5F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001B6B5F1F30142A0021F5F8 /* AppDelegate.swift */; };
-		001B6B621F30142A0021F5F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001B6B611F30142A0021F5F8 /* ViewController.swift */; };
 		001B6B651F30142A0021F5F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001B6B631F30142A0021F5F8 /* Main.storyboard */; };
 		001B6B671F30142A0021F5F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 001B6B661F30142A0021F5F8 /* Assets.xcassets */; };
 		001B6B6A1F30142A0021F5F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001B6B681F30142A0021F5F8 /* LaunchScreen.storyboard */; };
@@ -29,9 +30,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001784D21F30B9DA0087E7ED /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		001784D41F30B9F40087E7ED /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		001B6B5C1F30142A0021F5F8 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		001B6B5F1F30142A0021F5F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		001B6B611F30142A0021F5F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		001B6B641F30142A0021F5F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		001B6B661F30142A0021F5F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		001B6B691F30142A0021F5F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -142,7 +144,8 @@
 		001B6B821F3031A00021F5F8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				001B6B611F30142A0021F5F8 /* ViewController.swift */,
+				001784D21F30B9DA0087E7ED /* ChatVC.swift */,
+				001784D41F30B9F40087E7ED /* ChannelVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -368,7 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				001B6B621F30142A0021F5F8 /* ViewController.swift in Sources */,
+				001784D51F30B9F40087E7ED /* ChannelVC.swift in Sources */,
+				001784D31F30B9DA0087E7ED /* ChatVC.swift in Sources */,
 				001B6B601F30142A0021F5F8 /* AppDelegate.swift in Sources */,
 				001B6B861F3031D60021F5F8 /* SWRevealViewController.m in Sources */,
 			);
@@ -603,6 +607,7 @@
 				001B6B7B1F30142A0021F5F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		001B6B7C1F30142A0021F5F8 /* Build configuration list for PBXNativeTarget "SmackTests" */ = {
 			isa = XCConfigurationList;
@@ -611,6 +616,7 @@
 				001B6B7E1F30142A0021F5F8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
