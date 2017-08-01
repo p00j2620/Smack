@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+// This VC Controls the rear view in SWReveal
 class ChatVC: UIViewController {
 	
 	//Outlets
@@ -16,12 +16,12 @@ class ChatVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
+		// Added action on button press and implemented swipe gesture to reveal ChatVC and tap to close
 		menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
-		
 		self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
 		self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
 
-        // Do any additional setup after loading the view.
+		
     }
 
 }
