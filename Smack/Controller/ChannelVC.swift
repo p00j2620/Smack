@@ -9,11 +9,21 @@
 import UIKit
 // This VC controls the front view in SWReveal
 class ChannelVC: UIViewController {
+	
+	//Outlets
+	@IBOutlet weak var loginBtn: UIButton!
+	
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		// Setting the width of revealed window - ChatVC
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 48
     }
-
+	// Functions
+	
+	@IBAction func loginBtnTapped(_ sender: UIButton) {
+		performSegue(withIdentifier: TO_LOGIN, sender: nil)
+	}
+	
+	
 }
