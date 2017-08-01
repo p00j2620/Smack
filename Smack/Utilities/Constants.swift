@@ -10,3 +10,5 @@ import Foundation
 
 // Segues
 let TO_LOGIN = "toLoginVCSegue"
+let TO_ACCOUNT = "toAccountVCSegue"
+let UNWIND_TO_CHANNELVC = "unwindToChannelVC"

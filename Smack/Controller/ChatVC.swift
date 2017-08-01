@@ -15,6 +15,7 @@ class ChatVC: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.dismissKeyboardOnTap()
 		
 		// Added action on button press and implemented swipe gesture to reveal ChatVC and tap to close
 		menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
@@ -23,5 +24,5 @@ class ChatVC: UIViewController {
 
 		
     }
-
+ // Functions
 }

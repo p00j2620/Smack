@@ -15,6 +15,7 @@ class LoginVC: UIViewController {
 	
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.dismissKeyboardOnTap()
 
         // Do any additional setup after loading the view.
 	}
@@ -25,7 +26,11 @@ class LoginVC: UIViewController {
 		dismiss(animated: true, completion: nil)
 	}
 	@IBAction func loginBtnTapped(_ sender: UIButton) {
+		
 	}
-	@IBOutlet weak var signupBtnTapped: UIButton!
+
+	@IBAction func signupBtnTapped(_ sender: Any) {
+		performSegue(withIdentifier: TO_ACCOUNT, sender: nil)
+	}
 	
 }

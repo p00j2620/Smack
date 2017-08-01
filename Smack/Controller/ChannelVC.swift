@@ -16,6 +16,8 @@ class ChannelVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.dismissKeyboardOnTap()
+		
 		// Setting the width of revealed window - ChatVC
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 48
     }
@@ -24,6 +26,6 @@ class ChannelVC: UIViewController {
 	@IBAction func loginBtnTapped(_ sender: UIButton) {
 		performSegue(withIdentifier: TO_LOGIN, sender: nil)
 	}
-	
+	@IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
 	
 }
