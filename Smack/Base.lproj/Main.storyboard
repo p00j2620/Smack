@@ -268,7 +268,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="jPo-Xh-Db1">
                                 <rect key="frame" x="62" y="292" width="250" height="80"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eB-kx-xqJ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0eB-kx-xqJ" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="50"/>
                                         <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -395,7 +395,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwf-4X-3U7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwf-4X-3U7" customClass="RoundedButton" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="62" y="597" width="250" height="50"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -406,6 +406,9 @@
                                 <state key="normal" title="Create Account">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountButtonTapped:" destination="Pt3-qc-JWd" eventType="touchUpInside" id="l1P-eM-6CU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="30y-CJ-gj4">
                                 <rect key="frame" x="323" y="20" width="28" height="28"/>
@@ -430,6 +433,9 @@
                                         <state key="normal" title="Choose avatar">
                                             <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="chooseAvatarTapped:" destination="Pt3-qc-JWd" eventType="touchUpInside" id="Gt4-fd-maj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRI-n0-Gl7">
                                         <rect key="frame" x="20" y="153" width="173" height="32"/>
@@ -437,6 +443,9 @@
                                         <state key="normal" title="Generate background color">
                                             <color key="titleColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="generateRandomColorTapped:" destination="Pt3-qc-JWd" eventType="touchUpInside" id="KaM-uB-iWq"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -457,6 +466,10 @@
                         <viewLayoutGuide key="safeArea" id="mbO-1l-J2X"/>
                     </view>
                     <connections>
+                        <outlet property="avatarImage" destination="Ffd-nd-DM1" id="PDB-nt-KS7"/>
+                        <outlet property="emailTextField" destination="ZqW-CY-jrc" id="QgO-IF-Xrp"/>
+                        <outlet property="passwordTextField" destination="hxU-7G-w7C" id="pnW-yj-Neq"/>
+                        <outlet property="usernameTextField" destination="Mdi-bZ-agp" id="chS-d3-gDB"/>
                         <segue destination="2W6-mK-gK5" kind="unwind" identifier="unwindToChannelVC" unwindAction="prepareForUnwindWithSegue:" id="JSZ-Fa-OIO"/>
                     </connections>
                 </viewController>

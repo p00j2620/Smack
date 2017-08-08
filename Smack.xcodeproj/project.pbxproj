@@ -17,6 +17,7 @@
 		001B6B6A1F30142A0021F5F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 001B6B681F30142A0021F5F8 /* LaunchScreen.storyboard */; };
 		001B6B751F30142A0021F5F8 /* SmackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001B6B741F30142A0021F5F8 /* SmackTests.swift */; };
 		001B6B861F3031D60021F5F8 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 001B6B851F3031D60021F5F8 /* SWRevealViewController.m */; };
+		002287B51F38A8AE004BDBAB /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002287B41F38A8AE004BDBAB /* RoundedButton.swift */; };
 		0068B44A1F312C8000283D90 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0068B4491F312C8000283D90 /* LoginVC.swift */; };
 		00D3B5781F31351700F622E3 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D3B5771F31351700F622E3 /* AccountVC.swift */; };
 		00D889F31F3143F20055C5B6 /* DismissKeyboardOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D889F21F3143F20055C5B6 /* DismissKeyboardOnTap.swift */; };
@@ -52,6 +53,7 @@
 		001B6B831F3031D50021F5F8 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
 		001B6B841F3031D50021F5F8 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../../../../../Downloads/Smack Assets/SWReveal/SWRevealViewController.h"; sourceTree = "<group>"; };
 		001B6B851F3031D60021F5F8 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../../../../../Downloads/Smack Assets/SWReveal/SWRevealViewController.m"; sourceTree = "<group>"; };
+		002287B41F38A8AE004BDBAB /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		0068B4491F312C8000283D90 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		00D3B5771F31351700F622E3 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		00D889F21F3143F20055C5B6 /* DismissKeyboardOnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardOnTap.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				001784D61F30C8700087E7ED /* GradientView.swift */,
+				002287B41F38A8AE004BDBAB /* RoundedButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 				001784D31F30B9DA0087E7ED /* ChatVC.swift in Sources */,
 				0068B44A1F312C8000283D90 /* LoginVC.swift in Sources */,
 				001784D71F30C8700087E7ED /* GradientView.swift in Sources */,
+				002287B51F38A8AE004BDBAB /* RoundedButton.swift in Sources */,
 				001B6B601F30142A0021F5F8 /* AppDelegate.swift in Sources */,
 				00D889F61F3247460055C5B6 /* AuthService.swift in Sources */,
 				001B6B861F3031D60021F5F8 /* SWRevealViewController.m in Sources */,
