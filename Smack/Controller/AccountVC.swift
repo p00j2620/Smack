@@ -15,6 +15,10 @@ class AccountVC: UIViewController {
 	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var avatarImage: UIImageView!
 	
+	// Variables
+	var avatarName = "profileDefault"
+	var avatarColor = "[0.5, 0.5, 0.5, 1]"
+	
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.dismissKeyboardOnTap()
@@ -31,6 +35,11 @@ class AccountVC: UIViewController {
 	@IBAction func generateRandomColorTapped(_ sender: UIButton) {
 	}
 	@IBAction func createAccountButtonTapped(_ sender: UIButton) {
+		
+		guard let username = usernameTextField.text , usernameTextField.text != "" else {
+			return
+		}
+		
 		guard let email = emailTextField.text , emailTextField.text != "" else {
 			return
 		}
@@ -41,7 +50,12 @@ class AccountVC: UIViewController {
 			if success {
 				AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in
 					if success {
-						print("User is logged in", AuthService.instance.authToken)
+						AuthService.instance.createUser(name: username, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
+							if success {
+								print(UserDataService.instance.name, UserDataService.instance.avatarName)
+								self.performSegue(withIdentifier: UNWIND_TO_CHANNELVC, sender: nil)
+							}
+						})
 					}
 				})
 			}
