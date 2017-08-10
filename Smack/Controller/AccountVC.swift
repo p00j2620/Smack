@@ -13,7 +13,8 @@ class AccountVC: UIViewController {
 	@IBOutlet weak var usernameTextField: UITextField!
 	@IBOutlet weak var emailTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
-	@IBOutlet weak var avatarImage: UIImageView!
+	@IBOutlet weak var avatarBtnImage: UIButton!
+	
 	
 	// Variables
 	var avatarName = "profileDefault"
@@ -26,11 +27,15 @@ class AccountVC: UIViewController {
 		
     }
 	// Functions
+	@IBAction func avatarImgBtnTapped(_ sender: UIButton) {
+		performSegue(withIdentifier: TO_AVATAR_PICKERVC, sender: nil)
+	}
 	
 	@IBAction func closeBtnTapped(_ sender: UIButton) {
 		performSegue(withIdentifier: UNWIND_TO_CHANNELVC, sender: nil)
 	}
 	@IBAction func chooseAvatarTapped(_ sender: UIButton) {
+		performSegue(withIdentifier: TO_AVATAR_PICKERVC, sender: nil)
 	}
 	@IBAction func generateRandomColorTapped(_ sender: UIButton) {
 	}
