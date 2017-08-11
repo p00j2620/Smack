@@ -16,6 +16,7 @@ class AccountVC: UIViewController {
 	@IBOutlet weak var avatarBtnImage: UIButton!
 	
 	
+	
 	// Variables
 	var avatarName = "profileDefault"
 	var avatarColor = "[0.5, 0.5, 0.5, 1]"
@@ -27,6 +28,15 @@ class AccountVC: UIViewController {
 		
     }
 	// Functions
+	override func viewDidAppear(_ animated: Bool) {
+		if UserDataService.instance.avatarName != "" {
+			if let userAvatar = UIImage(named: UserDataService.instance.avatarName){
+				avatarBtnImage.setImage(userAvatar, for: .normal)
+			}
+			avatarName = UserDataService.instance.avatarName
+		}
+	}
+	
 	@IBAction func avatarImgBtnTapped(_ sender: UIButton) {
 		performSegue(withIdentifier: TO_AVATAR_PICKERVC, sender: nil)
 	}

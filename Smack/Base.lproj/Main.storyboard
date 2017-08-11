@@ -470,7 +470,7 @@
                         <viewLayoutGuide key="safeArea" id="mbO-1l-J2X"/>
                     </view>
                     <connections>
-                        <outlet property="avatarBtnImage" destination="xvR-2V-QIV" id="uZc-l0-rOk"/>
+                        <outlet property="avatarBtnImage" destination="xvR-2V-QIV" id="jSo-xK-Fx1"/>
                         <outlet property="emailTextField" destination="ZqW-CY-jrc" id="QgO-IF-Xrp"/>
                         <outlet property="passwordTextField" destination="hxU-7G-w7C" id="pnW-yj-Neq"/>
                         <outlet property="usernameTextField" destination="Mdi-bZ-agp" id="chS-d3-gDB"/>
