@@ -13,14 +13,15 @@ class LoginVC: UIViewController {
 	@IBOutlet weak var usernameTextField: UITextField!
 	@IBOutlet weak var passwordTextField: UITextField!
 	
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	
+	// View Did Load
+	override func viewDidLoad() {
+		super.viewDidLoad()
 		self.dismissKeyboardOnTap()
-
-        // Do any additional setup after loading the view.
+//		setupView()
 	}
-
-	// Functions
+	
+	// Actions
 	@IBAction func closeBtnTapped(_ sender: UIButton) {
 		// Dismisses loginVC when tapped
 		dismiss(animated: true, completion: nil)
@@ -28,9 +29,17 @@ class LoginVC: UIViewController {
 	@IBAction func loginBtnTapped(_ sender: UIButton) {
 		
 	}
-
+	
 	@IBAction func signupBtnTapped(_ sender: Any) {
 		performSegue(withIdentifier: TO_ACCOUNT, sender: nil)
 	}
+	
+	// Functions
+//	func setupView() {
+//
+//		usernameTextField.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+//
+//		passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+//	}
 	
 }

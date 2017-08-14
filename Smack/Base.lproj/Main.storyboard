@@ -118,7 +118,7 @@
                                 <rect key="frame" x="283" y="93.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Ncy-AV-9hU" userLabel="Profile Default Img">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Ncy-AV-9hU" userLabel="Profile Default Img" customClass="CircleUIImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="566" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="AAK-H0-2Ef"/>
@@ -224,7 +224,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="4OK-ho-nJ0">
                                 <rect key="frame" x="62" y="153" width="250" height="94"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gby-Ml-rMj">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gby-Ml-rMj" customClass="PlaceholderColor" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="2Qt-c6-Kjs"/>
@@ -242,7 +242,7 @@
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="ZZJ-wu-kZI"/>
                                         </constraints>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djg-6P-NSU">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="djg-6P-NSU" customClass="PlaceholderColor" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="54" width="250" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="250" id="Wyf-9P-2PW"/>
@@ -420,7 +420,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="YES" axis="vertical" alignment="center" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="mbj-h9-qek" userLabel="Avatar StackView">
                                 <rect key="frame" x="101" y="351" width="173" height="217"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvR-2V-QIV">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xvR-2V-QIV" customClass="CircleImageBtn" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="14" y="0.0" width="145" height="145"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="145" id="3GT-uI-eSj"/>
@@ -453,6 +453,10 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MZm-XQ-8sa">
+                                <rect key="frame" x="169" y="255" width="37" height="37"/>
+                                <color key="color" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -461,11 +465,13 @@
                             <constraint firstItem="D8B-vS-QeW" firstAttribute="top" secondItem="5ap-Gv-TUa" secondAttribute="bottom" constant="45" id="7aL-K9-7Em"/>
                             <constraint firstItem="mbO-1l-J2X" firstAttribute="bottom" secondItem="zwf-4X-3U7" secondAttribute="bottom" constant="20" id="B6E-Jh-9Gb"/>
                             <constraint firstItem="30y-CJ-gj4" firstAttribute="top" secondItem="mbO-1l-J2X" secondAttribute="top" id="CzW-l0-sWH"/>
+                            <constraint firstItem="MZm-XQ-8sa" firstAttribute="centerX" secondItem="Vy4-zu-kPN" secondAttribute="centerX" id="Nrx-EG-fQw"/>
                             <constraint firstItem="zwf-4X-3U7" firstAttribute="centerX" secondItem="Vy4-zu-kPN" secondAttribute="centerX" id="Vnf-La-jpT"/>
                             <constraint firstItem="5ap-Gv-TUa" firstAttribute="top" secondItem="mbO-1l-J2X" secondAttribute="top" constant="52" id="aGx-xh-DFG"/>
                             <constraint firstItem="mbj-h9-qek" firstAttribute="top" secondItem="D8B-vS-QeW" secondAttribute="bottom" constant="51.5" id="d44-UK-6Sh"/>
                             <constraint firstItem="D8B-vS-QeW" firstAttribute="centerX" secondItem="Vy4-zu-kPN" secondAttribute="centerX" id="qjM-N6-CLC"/>
                             <constraint firstItem="mbO-1l-J2X" firstAttribute="trailing" secondItem="30y-CJ-gj4" secondAttribute="trailing" constant="24" id="wbi-am-CDH"/>
+                            <constraint firstItem="MZm-XQ-8sa" firstAttribute="centerY" secondItem="Vy4-zu-kPN" secondAttribute="centerY" constant="-60" id="zzw-xb-n9W"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mbO-1l-J2X"/>
                     </view>
@@ -473,6 +479,7 @@
                         <outlet property="avatarBtnImage" destination="xvR-2V-QIV" id="jSo-xK-Fx1"/>
                         <outlet property="emailTextField" destination="ZqW-CY-jrc" id="QgO-IF-Xrp"/>
                         <outlet property="passwordTextField" destination="hxU-7G-w7C" id="pnW-yj-Neq"/>
+                        <outlet property="spinner" destination="MZm-XQ-8sa" id="gKq-Wy-H8B"/>
                         <outlet property="usernameTextField" destination="Mdi-bZ-agp" id="chS-d3-gDB"/>
                         <segue destination="2W6-mK-gK5" kind="unwind" identifier="unwindToChannelVC" unwindAction="prepareForUnwindWithSegue:" id="JSZ-Fa-OIO"/>
                         <segue destination="P7t-ln-Pvl" kind="show" identifier="toAvatarPickerVC" id="fMO-pq-mgS"/>

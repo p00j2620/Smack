@@ -15,26 +15,42 @@ class AccountVC: UIViewController {
 	@IBOutlet weak var passwordTextField: UITextField!
 	@IBOutlet weak var avatarBtnImage: UIButton!
 	
+	@IBOutlet weak var spinner: UIActivityIndicatorView!
 	
 	
 	// Variables
 	var avatarName = "profileDefault"
 	var avatarColor = "[0.5, 0.5, 0.5, 1]"
+	var bgColor : UIColor?
+	
+	// View Did Load
 	
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.dismissKeyboardOnTap()
-
-		
+		setupView()
     }
+	
 	// Functions
 	override func viewDidAppear(_ animated: Bool) {
 		if UserDataService.instance.avatarName != "" {
 			if let userAvatar = UIImage(named: UserDataService.instance.avatarName){
 				avatarBtnImage.setImage(userAvatar, for: .normal)
+				avatarName = UserDataService.instance.avatarName
+				if avatarName.contains("light") && bgColor == nil {
+					avatarBtnImage.backgroundColor = UIColor.lightGray
+				}
 			}
-			avatarName = UserDataService.instance.avatarName
+			
 		}
+	}
+	
+	func setupView() {
+		
+		spinner.isHidden = true
+//		usernameTextField.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+//		emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+//		passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
 	}
 	
 	@IBAction func avatarImgBtnTapped(_ sender: UIButton) {
@@ -48,8 +64,20 @@ class AccountVC: UIViewController {
 		performSegue(withIdentifier: TO_AVATAR_PICKERVC, sender: nil)
 	}
 	@IBAction func generateRandomColorTapped(_ sender: UIButton) {
+		let r = CGFloat(arc4random_uniform(255)) / 255
+		let g = CGFloat(arc4random_uniform(255)) / 255
+		let b = CGFloat(arc4random_uniform(255)) / 255
+		
+		bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+		UIView.animate(withDuration: 0.2) {
+			self.avatarBtnImage.backgroundColor = self.bgColor
+		}
+		
 	}
 	@IBAction func createAccountButtonTapped(_ sender: UIButton) {
+		
+		spinner.isHidden = false
+		spinner.startAnimating()
 		
 		guard let username = usernameTextField.text , usernameTextField.text != "" else {
 			return
@@ -67,8 +95,10 @@ class AccountVC: UIViewController {
 					if success {
 						AuthService.instance.createUser(name: username, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
 							if success {
-								print(UserDataService.instance.name, UserDataService.instance.avatarName)
+								self.spinner.isHidden = true
+								self.spinner.stopAnimating()
 								self.performSegue(withIdentifier: UNWIND_TO_CHANNELVC, sender: nil)
+								NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
 							}
 						})
 					}

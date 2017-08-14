@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		001753471F40E71200729E70 /* PlaceholderColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001753461F40E71200729E70 /* PlaceholderColor.swift */; };
 		001784D31F30B9DA0087E7ED /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001784D21F30B9DA0087E7ED /* ChatVC.swift */; };
 		001784D51F30B9F40087E7ED /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001784D41F30B9F40087E7ED /* ChannelVC.swift */; };
 		001784D71F30C8700087E7ED /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 001784D61F30C8700087E7ED /* GradientView.swift */; };
@@ -22,6 +23,8 @@
 		0053F4511F3BAB61004AB11F /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053F4501F3BAB61004AB11F /* AvatarPickerVC.swift */; };
 		0053F4531F3BE3B8004AB11F /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053F4521F3BE3B8004AB11F /* AvatarCell.swift */; };
 		0068B44A1F312C8000283D90 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0068B4491F312C8000283D90 /* LoginVC.swift */; };
+		00A469F01F3E740D0001ACF2 /* CircleImageBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A469EF1F3E740D0001ACF2 /* CircleImageBtn.swift */; };
+		00A469F21F3E79B90001ACF2 /* CircleUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A469F11F3E79B90001ACF2 /* CircleUIImage.swift */; };
 		00D3B5781F31351700F622E3 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D3B5771F31351700F622E3 /* AccountVC.swift */; };
 		00D889F31F3143F20055C5B6 /* DismissKeyboardOnTap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D889F21F3143F20055C5B6 /* DismissKeyboardOnTap.swift */; };
 		00D889F61F3247460055C5B6 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D889F51F3247460055C5B6 /* AuthService.swift */; };
@@ -40,6 +43,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001753461F40E71200729E70 /* PlaceholderColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderColor.swift; sourceTree = "<group>"; };
 		001784D21F30B9DA0087E7ED /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		001784D41F30B9F40087E7ED /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 		001784D61F30C8700087E7ED /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -61,6 +65,8 @@
 		0053F4501F3BAB61004AB11F /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		0053F4521F3BE3B8004AB11F /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
 		0068B4491F312C8000283D90 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		00A469EF1F3E740D0001ACF2 /* CircleImageBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageBtn.swift; sourceTree = "<group>"; };
+		00A469F11F3E79B90001ACF2 /* CircleUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleUIImage.swift; sourceTree = "<group>"; };
 		00D3B5771F31351700F622E3 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
 		00D889F21F3143F20055C5B6 /* DismissKeyboardOnTap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissKeyboardOnTap.swift; sourceTree = "<group>"; };
 		00D889F51F3247460055C5B6 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -171,6 +177,9 @@
 				001784D61F30C8700087E7ED /* GradientView.swift */,
 				002287B41F38A8AE004BDBAB /* RoundedButton.swift */,
 				0053F4521F3BE3B8004AB11F /* AvatarCell.swift */,
+				00A469EF1F3E740D0001ACF2 /* CircleImageBtn.swift */,
+				00A469F11F3E79B90001ACF2 /* CircleUIImage.swift */,
+				001753461F40E71200729E70 /* PlaceholderColor.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -418,6 +427,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				00D3B5781F31351700F622E3 /* AccountVC.swift in Sources */,
+				00A469F21F3E79B90001ACF2 /* CircleUIImage.swift in Sources */,
 				00D889F31F3143F20055C5B6 /* DismissKeyboardOnTap.swift in Sources */,
 				0053F4531F3BE3B8004AB11F /* AvatarCell.swift in Sources */,
 				001784D51F30B9F40087E7ED /* ChannelVC.swift in Sources */,
@@ -426,11 +436,13 @@
 				001784D71F30C8700087E7ED /* GradientView.swift in Sources */,
 				0053F44D1F3B77A1004AB11F /* UserDataService.swift in Sources */,
 				002287B51F38A8AE004BDBAB /* RoundedButton.swift in Sources */,
+				001753471F40E71200729E70 /* PlaceholderColor.swift in Sources */,
 				001B6B601F30142A0021F5F8 /* AppDelegate.swift in Sources */,
 				00D889F61F3247460055C5B6 /* AuthService.swift in Sources */,
 				001B6B861F3031D60021F5F8 /* SWRevealViewController.m in Sources */,
 				001784DA1F3115B40087E7ED /* Constants.swift in Sources */,
 				0053F4511F3BAB61004AB11F /* AvatarPickerVC.swift in Sources */,
+				00A469F01F3E740D0001ACF2 /* CircleImageBtn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
