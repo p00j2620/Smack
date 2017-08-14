@@ -118,7 +118,7 @@
                                 <rect key="frame" x="283" y="93.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileDefault" translatesAutoresizingMaskIntoConstraints="NO" id="Ncy-AV-9hU" userLabel="Profile Default Img" customClass="CircleUIImage" customModule="Smack" customModuleProvider="target">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ncy-AV-9hU" userLabel="Profile Default Img" customClass="CircleUIImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="566" width="75" height="75"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="AAK-H0-2Ef"/>
@@ -184,6 +184,7 @@
                         <viewLayoutGuide key="safeArea" id="GB1-mr-Jkd"/>
                     </view>
                     <connections>
+                        <outlet property="avatarImage" destination="Ncy-AV-9hU" id="fFc-MH-5m7"/>
                         <outlet property="loginBtn" destination="pDG-Nn-bfG" id="WJo-Yj-eJI"/>
                         <segue destination="gMe-PS-OEA" kind="show" identifier="toLoginVCSegue" id="Wrc-kF-ku9"/>
                     </connections>
@@ -579,6 +580,7 @@
     <resources>
         <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>
+        <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>

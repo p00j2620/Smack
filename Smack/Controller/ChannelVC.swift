@@ -12,12 +12,13 @@ class ChannelVC: UIViewController {
 	
 	//Outlets
 	@IBOutlet weak var loginBtn: UIButton!
+	@IBOutlet weak var avatarImage: CircleUIImage!
 	
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		self.dismissKeyboardOnTap()
-		
+		NotificationCenter.default.addObserver(self, selector: #selector(ChannelVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
 		// Setting the width of revealed window - ChatVC
         self.revealViewController().rearViewRevealWidth = self.view.frame.size.width - 48
     }
@@ -28,4 +29,16 @@ class ChannelVC: UIViewController {
 	}
 	@IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
 	
+	@objc func userDataDidChange(_ notif: Notification) {
+		if AuthService.instance.isLoggedin {
+			loginBtn.setTitle(UserDataService.instance.name, for: .normal)
+			avatarImage.image = UIImage(named: UserDataService.instance.avatarName)
+			avatarImage.backgroundColor = UserDataService.instance.returnUIColor(components: UserDataService.instance.avatarColor)
+			
+		} else {
+			loginBtn.setTitle("Login", for: .normal)
+			avatarImage.image = UIImage(named: "menuProfileIcon")
+			avatarImage.backgroundColor = UIColor.clear
+		}
+	}
 }
