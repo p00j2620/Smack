@@ -25,7 +25,15 @@ class ChannelVC: UIViewController {
 	// Functions
 	
 	@IBAction func loginBtnTapped(_ sender: UIButton) {
-		performSegue(withIdentifier: TO_LOGIN, sender: nil)
+		if AuthService.instance.isLoggedin {
+			let profile = ProfileVC()
+			profile.modalPresentationStyle = .custom
+			present(profile, animated: true, completion: nil)
+		} else {
+			performSegue(withIdentifier: TO_LOGIN, sender: nil)
+		}
+		
+		
 	}
 	@IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
 	

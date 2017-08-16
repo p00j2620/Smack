@@ -18,7 +18,6 @@ class LoginVC: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		self.dismissKeyboardOnTap()
-//		setupView()
 	}
 	
 	// Actions
@@ -35,11 +34,6 @@ class LoginVC: UIViewController {
 	}
 	
 	// Functions
-//	func setupView() {
-//
-//		usernameTextField.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-//
-//		passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-//	}
+
 	
 }
