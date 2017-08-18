@@ -139,7 +139,7 @@
                                 <rect key="frame" x="0.0" y="135.5" width="375" height="410.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="HyP-He-FI1">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="HyP-He-FI1" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HyP-He-FI1" id="4bY-p6-idZ">
@@ -159,6 +159,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="7a8-ei-E4z" id="w3w-Pp-tGK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -186,6 +189,7 @@
                     <connections>
                         <outlet property="avatarImage" destination="Ncy-AV-9hU" id="fFc-MH-5m7"/>
                         <outlet property="loginBtn" destination="pDG-Nn-bfG" id="WJo-Yj-eJI"/>
+                        <outlet property="tableView" destination="7hR-6Z-2uN" id="dZ7-Qf-Cp0"/>
                         <segue destination="gMe-PS-OEA" kind="show" identifier="toLoginVCSegue" id="Wrc-kF-ku9"/>
                     </connections>
                 </viewController>
