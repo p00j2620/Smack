@@ -299,10 +299,16 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="8kA-a7-LgK">
+                                <rect key="frame" x="168.5" y="215" width="37" height="37"/>
+                                <color key="color" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="8kA-a7-LgK" firstAttribute="centerX" secondItem="6aP-KV-RT7" secondAttribute="centerX" id="1Le-zn-vAY"/>
                             <constraint firstItem="T9X-3c-vOr" firstAttribute="trailing" secondItem="6aP-KV-RT7" secondAttribute="trailingMargin" id="2BB-Ag-Dsg"/>
+                            <constraint firstItem="8kA-a7-LgK" firstAttribute="centerY" secondItem="6aP-KV-RT7" secondAttribute="centerY" constant="-100" id="8kv-CX-Sy9"/>
                             <constraint firstItem="jPo-Xh-Db1" firstAttribute="centerX" secondItem="6aP-KV-RT7" secondAttribute="centerX" id="A8b-ao-NU1"/>
                             <constraint firstItem="jPo-Xh-Db1" firstAttribute="top" secondItem="4OK-ho-nJ0" secondAttribute="bottom" constant="45" id="AUF-uD-uAg"/>
                             <constraint firstItem="4OK-ho-nJ0" firstAttribute="centerX" secondItem="6aP-KV-RT7" secondAttribute="centerX" id="eq2-Yl-Sw1"/>
@@ -315,6 +321,7 @@
                     </view>
                     <connections>
                         <outlet property="passwordTextField" destination="djg-6P-NSU" id="LPs-iP-rAI"/>
+                        <outlet property="spinner" destination="8kA-a7-LgK" id="kdU-si-PUf"/>
                         <outlet property="usernameTextField" destination="gby-Ml-rMj" id="uAs-JH-ReV"/>
                         <segue destination="Pt3-qc-JWd" kind="show" identifier="toAccountVCSegue" id="LdW-Br-xuC"/>
                     </connections>

@@ -38,6 +38,14 @@ class ChannelVC: UIViewController {
 	@IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
 	
 	@objc func userDataDidChange(_ notif: Notification) {
+		setupUserInfo()
+	}
+	
+	override func viewDidAppear(_ animated: Bool) {
+		setupUserInfo()
+	}
+	
+	func setupUserInfo() {
 		if AuthService.instance.isLoggedin {
 			loginBtn.setTitle(UserDataService.instance.name, for: .normal)
 			avatarImage.image = UIImage(named: UserDataService.instance.avatarName)
