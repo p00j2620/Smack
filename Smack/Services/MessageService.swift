@@ -49,5 +49,23 @@ class MessageService {
         }
         
     }
+	
+	func createChannelToAdd(username: String, description: String) {
+		
+		
+		let channel = Channel(channelTitle: username, channelDescription: description, id: "")
+		self.channels.append(channel)
+		NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
 

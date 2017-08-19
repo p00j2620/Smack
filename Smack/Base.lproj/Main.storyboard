@@ -117,6 +117,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5N6-b0-tpt" userLabel="Add Channel Btn">
                                 <rect key="frame" x="283" y="93.5" width="22" height="22"/>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="addChannelButtonTapped:" destination="wlq-8T-pfa" eventType="touchUpInside" id="cV9-3S-iWT"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="menuProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Ncy-AV-9hU" userLabel="Profile Default Img" customClass="CircleUIImage" customModule="Smack" customModuleProvider="target">
                                 <rect key="frame" x="16" y="566" width="75" height="75"/>

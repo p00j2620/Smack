@@ -40,6 +40,15 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 	}
 	@IBAction func prepareForUnwind(segue: UIStoryboardSegue){}
 	
+	@IBAction func addChannelButtonTapped(_ sender: UIButton) {
+		if AuthService.instance.isLoggedin {
+			let addChannelForm = AddChannelVC()
+			addChannelForm.modalPresentationStyle = .custom
+			present(addChannelForm, animated: true, completion: nil)
+		} else {
+			performSegue(withIdentifier: TO_LOGIN, sender: nil)
+		}
+	}
 	@objc func userDataDidChange(_ notif: Notification) {
 		setupUserInfo()
 	}
