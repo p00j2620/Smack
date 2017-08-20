@@ -19,8 +19,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddChannelVC" customModule="Smack" customModuleProvider="target">
             <connections>
                 <outlet property="bgView" destination="el8-tp-63h" id="Nis-XH-jLs"/>
+                <outlet property="channelNameTextField" destination="V7W-jb-uuS" id="Mnw-UD-5rI"/>
                 <outlet property="descriptionTextField" destination="V41-P5-4yx" id="Rep-qG-1Uh"/>
-                <outlet property="usernameTextField" destination="V7W-jb-uuS" id="Itw-Ml-Rez"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -52,7 +52,7 @@
                                     <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7W-jb-uuS" customClass="PlaceholderColor" customModule="Smack" customModuleProvider="target">
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="channel name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="V7W-jb-uuS" customClass="PlaceholderColor" customModule="Smack" customModuleProvider="target">
                                     <rect key="frame" x="8.5" y="42.5" width="250" height="24"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="250" id="V00-cO-Jga"/>

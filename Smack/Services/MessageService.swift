@@ -22,8 +22,7 @@ class MessageService {
         Alamofire.request(URL_GET_CHANNELS, method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON { (response) in
             
             if response.result.error == nil {
-				self.channels.append(Channel(channelTitle: "First Channel", channelDescription: "This is my very first channel", id: "653545135"))
-				self.channels.append(Channel(channelTitle: "Second Channel", channelDescription: "This is my second channel", id: "5wdfsdf"))
+
                 guard let data = response.data else { return }
                 if let json = JSON(data: data).array {
 					
@@ -49,23 +48,7 @@ class MessageService {
         }
         
     }
-	
-	func createChannelToAdd(username: String, description: String) {
-		
-		
-		let channel = Channel(channelTitle: username, channelDescription: description, id: "")
-		self.channels.append(channel)
-		NotificationCenter.default.post(name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
-		
-	}
-	
-	
-	
-	
-	
-	
-	
-	
+
 	
 }
 

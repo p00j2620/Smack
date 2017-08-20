@@ -11,9 +11,10 @@ import UIKit
 class AddChannelVC: UIViewController {
 	
 	// Outlets
-	@IBOutlet weak var usernameTextField: PlaceholderColor!
+	
 	@IBOutlet weak var bgView: UIView!
 	
+	@IBOutlet weak var channelNameTextField: PlaceholderColor!
 	@IBOutlet weak var descriptionTextField: PlaceholderColor!
 	
     override func viewDidLoad() {
@@ -25,10 +26,14 @@ class AddChannelVC: UIViewController {
 	// Actions
 	@IBAction func createChannelTapped(_ sender: UIButton) {
 		
-		let username = usernameTextField.text ?? ""
-		let description = descriptionTextField.text ?? ""
+		guard let channelName = channelNameTextField.text, channelNameTextField.text != "" else { return }
+		guard let channelDescription = descriptionTextField.text else { return }
 		
-		MessageService.instance.createChannelToAdd(username: username, description: description)
+		SocketService.instance.addChannel(channelName: channelName, channelDescription: channelDescription) { (success) in
+			if success {
+				self.dismiss(animated: true, completion: nil)
+			}
+		}
 		dismiss(animated: true, completion: nil)
 		
 		}
