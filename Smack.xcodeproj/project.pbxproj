@@ -28,6 +28,8 @@
 		0053F44D1F3B77A1004AB11F /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053F44C1F3B77A1004AB11F /* UserDataService.swift */; };
 		0053F4511F3BAB61004AB11F /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053F4501F3BAB61004AB11F /* AvatarPickerVC.swift */; };
 		0053F4531F3BE3B8004AB11F /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0053F4521F3BE3B8004AB11F /* AvatarCell.swift */; };
+		006811C61F4A084A00566B3A /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006811C51F4A084A00566B3A /* Message.swift */; };
+		006811C81F4A3FD400566B3A /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006811C71F4A3FD400566B3A /* KeyboardBoundView.swift */; };
 		0068B44A1F312C8000283D90 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0068B4491F312C8000283D90 /* LoginVC.swift */; };
 		00A469F01F3E740D0001ACF2 /* CircleImageBtn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A469EF1F3E740D0001ACF2 /* CircleImageBtn.swift */; };
 		00A469F21F3E79B90001ACF2 /* CircleUIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00A469F11F3E79B90001ACF2 /* CircleUIImage.swift */; };
@@ -78,6 +80,8 @@
 		0053F44C1F3B77A1004AB11F /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		0053F4501F3BAB61004AB11F /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		0053F4521F3BE3B8004AB11F /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		006811C51F4A084A00566B3A /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		006811C71F4A3FD400566B3A /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardBoundView.swift; path = "../../../../../Downloads/Smack Assets/KeyboardBind View/KeyboardBoundView.swift"; sourceTree = "<group>"; };
 		0068B4491F312C8000283D90 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		00A469EF1F3E740D0001ACF2 /* CircleImageBtn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImageBtn.swift; sourceTree = "<group>"; };
 		00A469F11F3E79B90001ACF2 /* CircleUIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleUIImage.swift; sourceTree = "<group>"; };
@@ -185,6 +189,7 @@
 			children = (
 				00D889F21F3143F20055C5B6 /* DismissKeyboardOnTap.swift */,
 				00A4F8481F46412D008EEBBA /* Channel.swift */,
+				006811C51F4A084A00566B3A /* Message.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -192,6 +197,7 @@
 		001B6B811F30319A0021F5F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				006811C71F4A3FD400566B3A /* KeyboardBoundView.swift */,
 				001784D61F30C8700087E7ED /* GradientView.swift */,
 				002287B41F38A8AE004BDBAB /* RoundedButton.swift */,
 				0053F4521F3BE3B8004AB11F /* AvatarCell.swift */,
@@ -481,6 +487,8 @@
 				00D889F61F3247460055C5B6 /* AuthService.swift in Sources */,
 				001B6B861F3031D60021F5F8 /* SWRevealViewController.m in Sources */,
 				001784DA1F3115B40087E7ED /* Constants.swift in Sources */,
+				006811C61F4A084A00566B3A /* Message.swift in Sources */,
+				006811C81F4A3FD400566B3A /* KeyboardBoundView.swift in Sources */,
 				0053F4511F3BAB61004AB11F /* AvatarPickerVC.swift in Sources */,
 				00A469F01F3E740D0001ACF2 /* CircleImageBtn.swift in Sources */,
 			);

@@ -15,6 +15,9 @@
             <string>Avenir-Book</string>
             <string>Avenir-Heavy</string>
         </array>
+        <array key="HelveticaNeue.ttc">
+            <string>HelveticaNeue</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Reveal View Controller-->
@@ -71,23 +74,64 @@
                                     <constraint firstAttribute="height" constant="77" id="zd4-fR-PC7"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JfE-2P-oHO">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2ac-R0-c5w"/>
+                                </constraints>
+                                <color key="textColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEY-Z0-1Uk">
+                                <rect key="frame" x="337" y="632" width="30" height="30"/>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="sendMessageButtonTapped:" destination="Gsw-cP-o0t" eventType="touchUpInside" id="4Iz-Me-aHz"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nu3-t7-SPP">
+                                <rect key="frame" x="0.0" y="77" width="375" height="550"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="g0c-r2-vG4">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g0c-r2-vG4" id="dVg-fu-1Iw">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="JfE-2P-oHO" firstAttribute="leading" secondItem="m9U-kK-u1i" secondAttribute="leading" id="30a-SR-8gS"/>
+                            <constraint firstItem="JfE-2P-oHO" firstAttribute="top" secondItem="nu3-t7-SPP" secondAttribute="bottom" id="7WS-Kv-Lwz"/>
+                            <constraint firstItem="m9U-kK-u1i" firstAttribute="trailing" secondItem="JfE-2P-oHO" secondAttribute="trailing" id="G02-4J-AAU"/>
+                            <constraint firstItem="nu3-t7-SPP" firstAttribute="leading" secondItem="m9U-kK-u1i" secondAttribute="leading" id="Rwr-nh-8Ys"/>
                             <constraint firstItem="bgL-1X-H1V" firstAttribute="leading" secondItem="m9U-kK-u1i" secondAttribute="leading" id="TlJ-4U-0Gf"/>
                             <constraint firstItem="bgL-1X-H1V" firstAttribute="trailing" secondItem="m9U-kK-u1i" secondAttribute="trailing" id="XFA-03-XXS"/>
+                            <constraint firstItem="JfE-2P-oHO" firstAttribute="top" secondItem="nu3-t7-SPP" secondAttribute="bottom" id="dEu-nA-REH"/>
+                            <constraint firstItem="m9U-kK-u1i" firstAttribute="trailing" secondItem="HEY-Z0-1Uk" secondAttribute="trailing" constant="8" id="jv9-9P-Bvg"/>
+                            <constraint firstItem="nu3-t7-SPP" firstAttribute="top" secondItem="bgL-1X-H1V" secondAttribute="bottom" id="mXK-pu-f0f"/>
                             <constraint firstItem="bgL-1X-H1V" firstAttribute="top" secondItem="a3t-rI-Ofx" secondAttribute="top" id="peM-08-Ion"/>
+                            <constraint firstItem="JfE-2P-oHO" firstAttribute="bottom" secondItem="m9U-kK-u1i" secondAttribute="bottom" id="s3U-I7-I6s"/>
+                            <constraint firstItem="HEY-Z0-1Uk" firstAttribute="centerY" secondItem="JfE-2P-oHO" secondAttribute="centerY" id="wJq-0f-0RD"/>
+                            <constraint firstItem="nu3-t7-SPP" firstAttribute="trailing" secondItem="m9U-kK-u1i" secondAttribute="trailing" id="zKC-E7-G7s"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="m9U-kK-u1i"/>
                     </view>
                     <connections>
                         <outlet property="channelNameLabel" destination="SdX-wv-U7n" id="320-ff-xVX"/>
                         <outlet property="menuBtn" destination="Shx-sa-rhJ" id="ZX1-4S-gwM"/>
+                        <outlet property="messageTextField" destination="JfE-2P-oHO" id="lid-Gp-IMd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9VY-Z0-rOk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="881" y="493"/>
+            <point key="canvasLocation" x="880.79999999999995" y="492.50374812593708"/>
         </scene>
         <!--ChannelVC-->
         <scene sceneID="7dO-kG-BdX">
@@ -597,6 +641,7 @@
         <image name="closeButton" width="28" height="28"/>
         <image name="menuProfileIcon" width="99" height="99"/>
         <image name="profileDefault" width="192" height="192"/>
+        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>
