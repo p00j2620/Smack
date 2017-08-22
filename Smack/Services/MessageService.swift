@@ -47,7 +47,6 @@ class MessageService {
 			if response.result.error == nil {
 				guard let data = response.data else { return }
 				if let json = JSON(data: data).array {
-					print(json)
 					for item in json {
 						let id = item["_id"].stringValue
 						let messageBody = item["messageBody"].stringValue
@@ -63,8 +62,6 @@ class MessageService {
 						self.messages.append(message)
 						
 					}
-					
-					print(self.messages)
 					completion(true)
 				}
 				

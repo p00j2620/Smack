@@ -48,9 +48,7 @@ class AccountVC: UIViewController {
 	func setupView() {
 		
 		spinner.isHidden = true
-//		usernameTextField.attributedPlaceholder = NSAttributedString(string: "username", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-//		emailTextField.attributedPlaceholder = NSAttributedString(string: "email", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
-//		passwordTextField.attributedPlaceholder = NSAttributedString(string: "password", attributes: [NSAttributedStringKey.foregroundColor: smackPurplePlaceholder])
+
 	}
 	
 	@IBAction func avatarImgBtnTapped(_ sender: UIButton) {
@@ -82,16 +80,10 @@ class AccountVC: UIViewController {
 		spinner.isHidden = false
 		spinner.startAnimating()
 		
-		guard let username = usernameTextField.text , usernameTextField.text != "" else {
-			return
-		}
+		guard let username = usernameTextField.text , usernameTextField.text != "" else { return }
+		guard let email = emailTextField.text , emailTextField.text != "" else { return	}
+		guard let pass = passwordTextField.text, passwordTextField.text != "" else { return	}
 		
-		guard let email = emailTextField.text , emailTextField.text != "" else {
-			return
-		}
-		guard let pass = passwordTextField.text, passwordTextField.text != "" else {
-			return
-		}
 		AuthService.instance.registerUser(email: email, password: pass) { (success) in
 			if success {
 				AuthService.instance.loginUser(email: email, password: pass, completion: { (success) in

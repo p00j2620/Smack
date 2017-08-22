@@ -8,18 +8,29 @@
 
 import UIKit
 // This VC Controls the rear view in SWReveal
-class ChatVC: UIViewController {
+class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+
+	
 	
 	//Outlets
 	@IBOutlet weak var menuBtn: UIButton!
 	@IBOutlet weak var channelNameLabel: UILabel!
 	@IBOutlet weak var messageTextField: UITextField!
+	@IBOutlet weak var messageCell: UITableViewCell!
+	@IBOutlet weak var messageTableView: UITableView!
+	
 	
 	
     override func viewDidLoad() {
         super.viewDidLoad()
-		self.dismissKeyboardOnTap()
+//		self.dismissKeyboardOnTap()
 		view.bindToKeyboard()
+		messageTableView.delegate = self
+		messageTableView.dataSource = self
+		
+		self.messageTableView.estimatedRowHeight = 80
+		self.messageTableView.rowHeight = UITableViewAutomaticDimension
+	
 		
 		NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.userDataDidChange(_:)), name: NOTIF_USER_DATA_DID_CHANGE, object: nil)
 		NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.channelSelected(_:)), name: NOTIF_CHANNEL_SELECTED, object: nil)
@@ -54,9 +65,29 @@ class ChatVC: UIViewController {
 	}
 	
 	
-	
-	
 	// Functions
+	func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		if let cell = messageTableView.dequeueReusableCell(withIdentifier: "messageCell", for: indexPath) as? MessageCell {
+			let message = MessageService.instance.messages[indexPath.row]
+			cell.configureCell(message: message)
+			return cell
+		} else {
+			return UITableViewCell()
+		}
+	}
+	
+	func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+		return 80
+	}
+	
+	func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+		return MessageService.instance.messages.count
+	}
+	
+	func numberOfSections(in tableView: UITableView) -> Int {
+		return 1
+	}
+	
 	@objc func userDataDidChange(_ notif: Notification) {
 		if AuthService.instance.isLoggedin {
 			onLoginGetMessages()
@@ -91,7 +122,9 @@ class ChatVC: UIViewController {
 	func getMessages() {
 		guard let channelId = MessageService.instance.selectedChannel?.id else { return }
 		MessageService.instance.findAllMessagesForChannel(channelId: channelId) { (success) in
-	
+			if success {
+				self.messageTableView.reloadData()
+			}
 		}
 	}
 }
